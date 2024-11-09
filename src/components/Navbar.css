@@ -1,0 +1,72 @@
+/* src/components/Navbar.css */
+
+/* Base styles for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0b0060;
+}
+
+svg {
+  max-width: 100px;
+}
+
+
+/* Base styles for navigation links */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hamburger icon (hidden on large screens) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Hide the nav links by default on small screens */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #0b0060;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Show the nav links if the menu is open */
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* Show the hamburger icon on small screens */
+  .hamburger {
+    display: flex;
+  }
+}
